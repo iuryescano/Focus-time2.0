@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusTimer 2.0</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script type="module" src="src/main.js" defer></script>
+
+</head>
+<body>
+
+    <div id="app">
+        
+        <section id="timer" class="flex">
+            <span id="minutes">00</span>
+            <span>:</span>
+            <span id="seconds">00</span>
+        </section>
+
+
+        <section id="controls" class="flex">
+
+            <button 
+            data-action="toggleRunning"
+            class="ph ph-play-circle">
+                <span class="sr-only">Aciona o timer</span>
+            </button>
+
+            <button 
+            data-action="reset"
+            class="ph ph-stop-circle">
+                <span class="sr-only">Parar contador</span>
+            </button>
+
+            <button 
+            data-action="addOn"
+            class="ph ph-plus-circle">
+                <span class="sr-only">Adiciona 5</span>
+            </button>
+
+            <button 
+            data-action="removeOn"
+            class="ph ph-minus-circle">
+                <span class="sr-only">Remove 5</span>
+            </button>
+            
+
+        </section>
+
+        <div>
+            <section class="sounds">
+
+                <button 
+                id="toggle-mode" 
+                data-action="toggleMusic">
+                    <i class="ph ph-tree-evergreen"></i>
+                </button> 
+
+                <button 
+                data-action="toggleMusic"
+                id="toggle-mode">
+                    <span class="sr-only">Iniciar musica</span>
+                    <i class="ph ph-cloud-snow"></i>
+                </button>
+
+                <button 
+                data-action="toggleMusic"
+                id="toggle-mode">
+                    <i class="ph ph-storefront"></i>
+                </button>
+
+                <button 
+                data-action="toggleMusic"
+                id="toggle-mode">
+                    <i class="ph ph-flame"></i>
+                </button>
+
+            </section>
+        </div>
+
+    </div>
+</body>
+</html>
