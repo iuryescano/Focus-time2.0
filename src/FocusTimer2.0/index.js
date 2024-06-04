@@ -10,7 +10,11 @@ export function start(minutes, seconds) {
 
     events.registerControls()
     events.setMinutes()
-    events.toggleBanner()
-    events.toggleMusic
+    
+    events.toggleFlorestBanner()
+    events.toggleCloudBanner()
+    events.toggleStoreBanner()
+    events.toggleFlameBanner()
+    
 }
 

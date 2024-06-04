@@ -84,7 +84,11 @@ button {
 }
 
 
-#toggle-mode, #florestIcon {
+#toggle-mode, 
+#toggle-mode-florest, 
+#toggle-mode-cloud, 
+#toggle-mode-store, 
+#toggle-mode-flame {
     width: 13.8rem;
     height: 15.2rem;
     border-radius: 24px;

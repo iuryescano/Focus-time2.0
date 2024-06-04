@@ -3,7 +3,7 @@ import * as actions from './actions.js'
 import * as el from "./elements.js"
 import { updateDisplay } from "./timer.js";
 import state from './state.js'
-import { botao } from "./elements.js";
+import { buttonFlorest, buttonCloud, buttonStore, buttonFlame } from "./elements.js";
 
 
 export function registerControls(){
@@ -38,10 +38,84 @@ export function setMinutes() { /*Isso aqui q vai mudar no codigo para adicionar 
 }
 
 
-export function toggleBanner(){
+/* export function toggleBanner(){
     botao.forEach((item)=>{item.addEventListener('click', ()=>{ item.classList.toggle('light')})})
 }
+*/
 
-export function toggleMusic() {
-    botao
+export function toggleFlorestBanner() {
+    buttonFlorest.addEventListener('click', (event ) => {
+        buttonFlorest.classList.toggle('light') 
+    })
 }
+
+export function toggleCloudBanner() {
+    buttonCloud.addEventListener('click', (event ) => {
+        buttonCloud.classList.toggle('light') 
+    })
+}
+
+export function toggleStoreBanner() {
+    buttonStore.addEventListener('click', (event ) => {
+        buttonStore.classList.toggle('light') 
+    })
+}
+
+export function toggleFlameBanner() {
+    buttonFlame.addEventListener('click', (event ) => {
+        buttonFlame.classList.toggle('light') 
+    })
+}
+
+export function toggleMusicFlorest() {
+        if (el.florestMusic.paused) {
+            el.florestMusic.play();
+            el.musicButtonFlorest.setAttribute('data-action', 'stopMusic');
+        } else {
+            el.florestMusic.pause();
+            el.florestMusic.currentTime = 0;
+            el.musicButtonFlorest.setAttribute('data-action', 'toggleMusicFlorest');
+        }
+        
+    }
+
+export function toggleMusicCloud() {
+    if (el.rainMusic.paused) {
+        el.rainMusic.play();
+        el.musicButtonCloud.setAttribute('data-action', 'stopMusic');
+    } else {
+        el.rainMusic.pause();
+        el.rainMusic.currentTime = 0;
+        el.musicButtonCloud.setAttribute('data-action', 'toggleMusicFlorest');
+    }
+    
+}
+
+export function toggleMusicStore() {
+    if (el.storeMusic.paused) {
+        el.storeMusic.play();
+        el.musicButtonStore.setAttribute('data-action', 'stopMusic');
+    } else {
+        el.storeMusic.pause();
+        el.storeMusic.currentTime = 0;
+        el.musicButtonStore.setAttribute('data-action', 'toggleMusicStore');
+    }
+    
+}
+
+export function toggleMusicFlame() {
+    if (el.FlameMusic.paused) {
+        el.FlameMusic.play();
+        el.musicButtonFlame.setAttribute('data-action', 'stopMusic');
+    } else {
+        el.FlameMusic.pause();
+        el.FlameMusic.currentTime = 0;
+        el.musicButtonFlame.setAttribute('data-action', 'toggleMusicStore');
+    }
+    
+}
+
+el.musicButtonFlorest.addEventListener('click', toggleMusicFlorest);
+el.musicButtonCloud.addEventListener('click', toggleMusicCloud);
+el.musicButtonStore.addEventListener('click', toggleMusicStore);
+el.musicButtonFlame.addEventListener('click', toggleMusicFlame);
